@@ -1,39 +1,89 @@
-// Implemente uma função chamada getSetsOfFiveAnagrams() que encontre e retorne todos os conjuntos de 5 ou 
-// mais palavras em palavras.js que forem anagramas umas das outras, e imprima cada conjunto no DOM. 
+const testButton = window.document.getElementById("testCamp");
 
-// Sua função deve criar um novo elemento, definir seu conteúdo de texto igual ao resultado, e adicionar o 
-// novo elemento ao seu html, antes de finalmente retornar um array de arrays aninhados, o que significa 
-// que você deve terminar com um grande array que contém arrays menores contendo conjuntos de anagramas.
+const button = window.document.createElement('button');
+button.classList = 'startMachine';
+button.id = 'showBegin';
+button.innerText = 'Buscar anagramas com 5 ou mais palavras!'
+testButton.appendChild(button);
+
+const buttonItself = window.document.getElementById("showBegin");
+
+buttonItself.addEventListener('click', function () {
+    
+    // const showAnagrams = results => {
+    //     const show = window.document.getElementById('testCamp');
+    //     const div = window.document.createElement('div');
+    //     div.innerText = results;
+    //     div.classList = 'title';
+    //     show.appendChild(div);
+    //     // console.log(results)
+    // };
+    
+    const showAnagrams = results => {
+        const show = window.document.getElementById('testCamp');
+        const div = window.document.createElement('div');
+        div.classList = 'title';
+        for (let anagrams in results) {
+            console.log(anagrams)
+            const p = window.document.createElement('p');
+            p.innerHTML = `<strong>Anagramas para "${anagrams}":</strong><span id="espaço">&nbsp</span><span>[${results[anagrams]}]</span>`;
+            p.classList = 'content';
+            div.appendChild(p);
+        }
+        show.appendChild(div);
+    };
+    
+    const alphabetize = a => {
+        return a.toLowerCase().split('').sort().join('').trim();
+    };
+
+    const getSetsOfFiveOrMoreAnagrams = () => {
+        let results = {};
+        let subObj = {};
+        for (let i = 0; i < palavras.length; i++) {
+            let anagramingCount = alphabetize(palavras[i]);
+            if (subObj[anagramingCount] === undefined) {
+                subObj[anagramingCount] = [];
+            }
+            subObj[anagramingCount].push(' ' + palavras[i]);
+        }
+        for (let key in subObj) {
+            if (subObj[key].length >= 5) {
+                results[key] = subObj[key];
+            }
+        }
+        console.log(results);
+        return results;
+    };
+    showAnagrams(getSetsOfFiveOrMoreAnagrams());
+
+    button.style.display = "none";
+
+});
 
 
-// m u f q pegue todos os anagramas >= 5 do array palavras.js. Ou seja, Montar um array de arrays em que cada
-// array aninhado seja cada conjunto de 5 ou mais elementos.
-// o desafio agora nõa é mais colocar uma palavra e retornar seus anagramas mas sim agora retornar todos os
-// anagramas disponíveis >= a 5 elementos.
+// const palavrasObj = {};
+// for (let i = 0; i < palavras.length; i++) {
+//     let palavra = palavras[i];
+//     if (palavrasObj[palavra] === undefined) {
+//         palavrasObj[palavra] = palavra;
+//     }
+// }
+// É que este objeto deveria selecionar e armazenar pela primeira letra. ou seja, chave A,valor 'palavras com a no começo'
 
-//Resultado para o usuário:
-//criar um botão entitulado 'buscar anagramas com 5 ou mais palavras';
-
-//enquanto processa mostrar um contador de min:seg:mils;
-//if (contador > 01:00:00) {
-//    display: block para p: 'Infelizmente estourou o tempo de processamento permitido. Programe de novo, fi!'
-//}
-// display: block para p: 'Tempo limite de processamento não excedido! Ei-los!';
-
-//retornar um título 'Palavras com o anagrama 'LOREM': '
-//seguido do array dos 5 ou mais elementos;
-//(mas talvez seja melhor usar um objeto)
-
-//COMO?
-//tranformar o array palavras num objeto?
-//bom, já que esta função não terá mais parâmetro, já que será preciso colocar todos os elementos do array 
-//que obedeçam a condicional if (array[i][j].length >= 5) {...}, então o array(ou objeto?) terá que ser 
-//percorrido e cada elemento terá que ser 'anagramizado' e logo em seguida serão buscadas as palavras que se
-//encaixem neste anagrama.
-
-//DO QUE PRECISAREMOS?
-//montar uma função que mostre os resultados no HTML. (Esta funçaõ pode ser retornada como um objeto);
-
-//adaptar as funções do anagramas1 neste para usar a função getSetsOfFiveAnagrams().
-
-//de resto, estilize e monte as frases e use JSON.stringfy() para os arrays selecionados.
+// const getSetsOfFiveOrMoreAnagrams = () => {
+//     let results = {};
+//     for (let i = 0; i < palavras.length; i++) {
+//         let array = [];
+//         let anagramingCount = alphabetize(palavras[i]);
+//         array.push(palavras[i]);
+//         for (let j = 0; j < palavras.length; j++) {
+//             let anagramingPalavras = alphabetize(palavras[j])
+//             if (anagramingCount === anagramingPalavras) {
+//                 array.push(' ' + palavras[j]);
+//             }
+//         }
+//         console.log(array)
+//     }
+//     return results;
+// };
