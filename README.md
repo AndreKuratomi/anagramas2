@@ -9,7 +9,7 @@
 
 # Descrição
 
-<p><b>Anagramas 2</b> é um serviço simples de busca de anagramas na língua portuguesa. O usuário clica no botão a aplicação buscará por todos os conjuntos de 5 anagramas da língua portuguesa. Esta aplicação utiliza HTML5, CSS3, DOM e a linguagem Javascript</p>
+<p><b>Anagramas 2</b> é um serviço simples de busca de anagramas na língua portuguesa. O usuário clica no botão e a aplicação buscará por todos os conjuntos de 5 anagramas da língua portuguesa. Esta aplicação utiliza HTML5, CSS3, DOM e a linguagem Javascript</p>
 <br>
 
 # Instalação
@@ -25,7 +25,7 @@ git init
 ```
 
 <br>
-<h5>1. Fazer o clone do reposítório <span style="text-decoration: underline">Anagramas1</span> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
+<h5>1. Fazer o clone do reposítório <span style="text-decoration: underline">Anagramas2</span> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
 
 ```
 git clone git@gitlab.com:ABKURA/anagramas-2_2.git
