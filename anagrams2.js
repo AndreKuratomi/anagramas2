@@ -10,15 +10,6 @@ const buttonItself = window.document.getElementById("showBegin");
 
 buttonItself.addEventListener('click', function () {
     
-    // const showAnagrams = results => {
-    //     const show = window.document.getElementById('testCamp');
-    //     const div = window.document.createElement('div');
-    //     div.innerText = results;
-    //     div.classList = 'title';
-    //     show.appendChild(div);
-    //     // console.log(results)
-    // };
-    
     const showAnagrams = results => {
         const show = window.document.getElementById('testCamp');
         const div = window.document.createElement('div');
@@ -52,7 +43,6 @@ buttonItself.addEventListener('click', function () {
                 results[key] = subObj[key];
             }
         }
-        console.log(results);
         return results;
     };
     showAnagrams(getSetsOfFiveOrMoreAnagrams());
@@ -60,30 +50,3 @@ buttonItself.addEventListener('click', function () {
     button.style.display = "none";
 
 });
-
-
-// const palavrasObj = {};
-// for (let i = 0; i < palavras.length; i++) {
-//     let palavra = palavras[i];
-//     if (palavrasObj[palavra] === undefined) {
-//         palavrasObj[palavra] = palavra;
-//     }
-// }
-// É que este objeto deveria selecionar e armazenar pela primeira letra. ou seja, chave A,valor 'palavras com a no começo'
-
-// const getSetsOfFiveOrMoreAnagrams = () => {
-//     let results = {};
-//     for (let i = 0; i < palavras.length; i++) {
-//         let array = [];
-//         let anagramingCount = alphabetize(palavras[i]);
-//         array.push(palavras[i]);
-//         for (let j = 0; j < palavras.length; j++) {
-//             let anagramingPalavras = alphabetize(palavras[j])
-//             if (anagramingCount === anagramingPalavras) {
-//                 array.push(' ' + palavras[j]);
-//             }
-//         }
-//         console.log(array)
-//     }
-//     return results;
-// };
