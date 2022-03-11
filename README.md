@@ -60,9 +60,8 @@ code .
 
 <p>Basta clicar no link abaixo:</p>
 
-```
 https://anagramas2.vercel.app/
-```
+
 
 
 
