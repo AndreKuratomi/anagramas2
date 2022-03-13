@@ -15,7 +15,6 @@ buttonItself.addEventListener('click', function () {
         const div = window.document.createElement('div');
         div.classList = 'title';
         for (let anagrams in results) {
-            console.log(anagrams)
             const p = window.document.createElement('p');
             p.innerHTML = `<strong>Anagramas para "${anagrams}":</strong><span id="espaço">&nbsp</span><span>[${results[anagrams]}]</span>`;
             p.classList = 'content';
