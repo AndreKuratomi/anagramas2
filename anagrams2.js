@@ -38,7 +38,7 @@ buttonItself.addEventListener('click', function () {
             subObj[anagramingCount].push(' ' + palavras[i]);
         }
         for (let key in subObj) {
-            if (subObj[key].length >= 5) {
+            if (subObj[key].length == 2) {
                 results[key] = subObj[key];
             }
         }
