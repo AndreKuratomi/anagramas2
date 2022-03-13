@@ -12,6 +12,9 @@
 <p><b>Anagramas 2</b> é um serviço simples de busca de anagramas na língua portuguesa. O usuário clica no botão e a aplicação buscará por todos os conjuntos de 5 anagramas da língua portuguesa (ex: <strong>"aort": [ ator, atro, rato, rota, taro, toar, tora]</strong>). Esta aplicação utiliza HTML5, CSS3, DOM e a linguagem Javascript</p>
 <br>
 
+<p>Link vercel:</p>
+https://anagramas2.vercel.app/
+
 # Instalação
 
 <h5>0. Primeiramente, é necessário já ter instalado na própria máquina:</h5>
